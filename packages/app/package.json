@@ -11,6 +11,7 @@
     "run-web": "metro-web-dev-server"
   },
   "dependencies": {
+    "common": "workspace:^",
     "express": "^4.17.1",
     "memory-fs": "^0.5.0",
     "metro-web-dev-server": "workspace:^",

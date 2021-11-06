@@ -1,4 +1,5 @@
 import React from "react";
+import { hello } from "common";
 
 import { Button, Image, StyleSheet, Text, Platform, View } from "react-native";
 import type { TextProps } from "react-native";
@@ -31,6 +32,7 @@ function App() {
         />
         <Text style={styles.title}>React Native for Web</Text>
       </View>
+      <Text style={styles.text}>{hello()}</Text>
       <Text style={styles.text}>
         This is an example of an app built with{" "}
         <Link href="https://github.com/facebook/create-react-app">
