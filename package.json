@@ -1,0 +1,6 @@
+{
+  "name": "react-native-labs",
+  "workspaces": [
+    "packages/*"
+  ]
+}
