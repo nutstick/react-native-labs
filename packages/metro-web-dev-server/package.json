@@ -4,6 +4,7 @@
   "bin": "bin/metro-web-dev-server",
   "main": "dist/index.js",
   "license": "MIT",
+  "files": ["dist", "bin"],
   "scripts": {
     "build": "tsc",
     "prepare": "yarn build"
