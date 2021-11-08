@@ -1,26 +1,13 @@
-export interface Bundle {
-  name: string;
-  url: string;
-  priority: number;
-}
-
-export interface Manifest {
-  bundles: Bundle[];
-}
-
-const jsScripts = (assetManifest: Manifest) => {
-  return assetManifest.bundles
+const jsScripts = () => {
+  return ["/src/index.bundle?platform=web&dev=true&minify=false"]
     .map(
       (bundle) =>
-        `<script type="text/javascript" src="${bundle.url}" defer></script>`
+        `<script type="text/javascript" src="${bundle}" defer></script>`
     )
     .join("");
 };
 
-export const indexHtml = (
-  env: Record<string, string>,
-  assetManifest: Manifest
-) => {
+export const indexHtml = (env: Record<string, string>) => {
   return `
     <!doctype html>
     <html lang="en">
@@ -28,13 +15,12 @@ export const indexHtml = (
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>🚆 for web</title>
-        ${jsScripts(assetManifest)}
+        ${jsScripts()}
       </head>
       <body>
         <div id="root"></div>
         <script>
           window.process = ${JSON.stringify({ env })};
-          window.__ASSET_MANIFEST__ = ${JSON.stringify(assetManifest)}
         </script>
       </body>
     </html>

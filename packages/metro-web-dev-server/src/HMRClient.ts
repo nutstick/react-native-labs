@@ -1,8 +1,5 @@
 import invariant from "ts-invariant";
-import { Platform } from "react-native";
-// @ts-ignore
 import { default as MetroHMRClient } from "metro-runtime/src/modules/HMRClient";
-// // const Platform = require('./Platform');
 import prettyFormat from "pretty-format";
 
 const pendingEntryPoints: string[] = [];

@@ -1282,6 +1282,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/eventemitter3@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@types/eventemitter3@npm:2.0.2"
+  dependencies:
+    eventemitter3: "*"
+  checksum: 8fb5031eab566ac7689092eaebfbd76a043154ed2b7bc806730c6c543de4fa2b25b73a69574b8bdbfdb4e238de1144061ae482d1bda540540ca9479f7efc7bb7
+  languageName: node
+  linkType: hard
+
 "@types/express-serve-static-core@npm:^4.17.18":
   version: 4.17.24
   resolution: "@types/express-serve-static-core@npm:4.17.24"
@@ -2307,7 +2316,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"common@workspace:*, common@workspace:packages/common":
+"common@workspace:^, common@workspace:packages/common":
   version: 0.0.0-use.local
   resolution: "common@workspace:packages/common"
   languageName: unknown
@@ -2839,6 +2848,13 @@ __metadata:
   version: 5.0.1
   resolution: "event-target-shim@npm:5.0.1"
   checksum: 1ffe3bb22a6d51bdeb6bf6f7cf97d2ff4a74b017ad12284cc9e6a279e727dc30a5de6bb613e5596ff4dc3e517841339ad09a7eec44266eccb1aa201a30448166
+  languageName: node
+  linkType: hard
+
+"eventemitter3@npm:*":
+  version: 4.0.7
+  resolution: "eventemitter3@npm:4.0.7"
+  checksum: 1875311c42fcfe9c707b2712c32664a245629b42bb0a5a84439762dd0fd637fc54d078155ea83c2af9e0323c9ac13687e03cfba79b03af9f40c89b4960099374
   languageName: node
   linkType: hard
 
@@ -4345,7 +4361,7 @@ __metadata:
     "@types/react": ^17.0.33
     "@types/react-dom": ^17.0.10
     "@types/react-native": ^0.66.1
-    common: "workspace:*"
+    common: "workspace:^"
     express: ^4.17.1
     memory-fs: ^0.5.0
     metro-react-native-babel-preset: ^0.66.2
@@ -4514,12 +4530,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "metro-web-dev-server@workspace:packages/metro-web-dev-server"
   dependencies:
+    "@types/eventemitter3": ^2.0.2
     "@types/express": ^4.17.13
     "@types/node": ^16.11.6
     express: ^4.17.1
     graceful-fs: ^4.2.8
     helmet: ^4.6.0
     metro: ^0.66.2
+    ts-invariant: ^0.9.3
     typescript: ^4.4.4
     yargs: ^17.2.1
   bin:

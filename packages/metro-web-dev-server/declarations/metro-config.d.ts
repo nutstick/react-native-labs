@@ -69,7 +69,7 @@ declare module "metro-config" {
     entryPoints: ReadonlyArray<string>,
     options: GetTransformOptionsOpts,
     getDependenciesOf: (path: string) => Promise<Array<string>>
-  ) => Promise<ExtraTransformOptions>;
+  ) => Promise<Partial<ExtraTransformOptions>>;
 
   export type Middleware = (
     req: IncomingMessage,

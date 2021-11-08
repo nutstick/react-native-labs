@@ -5,10 +5,12 @@
 
 "use strict";
 
-// const yargs = require('yargs/yargs')
-// const { hideBin } = require('yargs/helpers')
-const { Server } = require("../dist");
-// const argv = yargs(hideBin(process.argv)).argv
+const yargs = require("yargs");
+const makeServeCommand = require("metro/src/commands/serve");
+const { runServer } = require("../dist");
 
-const server = new Server();
-server.initialize().then(() => server.listen());
+const { command, description, builder, handler } = makeServeCommand();
+
+yargs.command(command, description, builder, handler);
+
+runServer(yargs.argv);
