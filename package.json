@@ -1,6 +1,14 @@
 {
   "name": "react-native-labs",
+  "version": "1.0.0-monorepo",
+  "description": "My playground for cool ideas about react-native",
+  "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nutstick/react-native-labs.git"
+  },
+  "license": "MIT"
 }
