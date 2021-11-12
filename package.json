@@ -10,5 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/nutstick/react-native-labs.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "resolutions": {
+    "metro@0.66.2": "patch:metro@npm:0.66.2#.yarn/patches/metro-npm-0.66.2-6bf2522f94"
+  }
 }

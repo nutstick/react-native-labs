@@ -1,0 +1,16 @@
+diff --git a/src/node-haste/DependencyGraph.js b/src/node-haste/DependencyGraph.js
+index 477a1ebac62e4c4f0bf42f0be7d9662f2dcce288..2a210de5b5968b6a5b5edca44d900b93c0e19f55 100644
+--- a/src/node-haste/DependencyGraph.js
++++ b/src/node-haste/DependencyGraph.js
+@@ -200,7 +200,10 @@ class DependencyGraph extends EventEmitter {
+       moduleCache: this._moduleCache,
+       moduleMap: this._moduleMap,
+       nodeModulesPaths: this._config.resolver.nodeModulesPaths,
+-      preferNativePlatform: true,
++      preferNativePlatform:
++        this._config.resolver.preferNativePlatform != null
++          ? this._config.resolver.preferNativePlatform
++          : true,
+       projectRoot: this._config.projectRoot,
+       resolveAsset: (dirPath, assetName, extension) => {
+         const basePath = dirPath + path.sep + assetName;
