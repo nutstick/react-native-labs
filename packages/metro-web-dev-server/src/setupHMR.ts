@@ -9,7 +9,7 @@ declare global {
 
 HmrClient.setup(
   "web",
-  "/src/index.bundle",
+  "/index.bundle",
   window.process.env.BASE_URL ?? "localhost",
   window.process.env.PORT ?? "8081",
   true

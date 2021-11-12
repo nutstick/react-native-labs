@@ -12,8 +12,12 @@
         height: 100vh;
       }
     </style>
+    <script type="text/javascript" src="__BUNDLE_URL__" defer></script>
   </head>
   <body>
     <div id="app-root"></div>
+    <script>
+      window.process = __ENV__;
+    </script>
   </body>
 </html>

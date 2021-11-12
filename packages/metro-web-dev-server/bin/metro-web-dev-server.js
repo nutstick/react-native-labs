@@ -11,6 +11,27 @@ const { runServer } = require("../dist");
 
 const { command, description, builder, handler } = makeServeCommand();
 
-yargs.command(command, description, builder, handler);
-
-runServer(yargs.argv);
+yargs.command(
+  "*",
+  description,
+  (yargs) => {
+    builder(yargs);
+    yargs.option("entry-file", {
+      alias: "E",
+      type: "string",
+      default: "index.js",
+    });
+    yargs.option("html", {
+      type: "string",
+    });
+  },
+  async (argv) => {
+    try {
+      console.log(argv);
+      await runServer(argv);
+    } catch (error) {
+      console.error(error);
+      process.exit(1);
+    }
+  }
+).argv;

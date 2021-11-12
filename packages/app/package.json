@@ -8,7 +8,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "run-web": "metro-web-dev-server"
+    "web": "metro-web-dev-server --entry-file src/index.ts"
   },
   "dependencies": {
     "common": "workspace:^",
