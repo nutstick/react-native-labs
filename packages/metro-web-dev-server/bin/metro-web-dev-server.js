@@ -27,7 +27,6 @@ yargs.command(
   },
   async (argv) => {
     try {
-      console.log(argv);
       await runServer(argv);
     } catch (error) {
       console.error(error);
