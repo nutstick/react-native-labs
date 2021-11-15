@@ -15,7 +15,7 @@
   },
   "author": "Nuttapat Kirawittaya <nuttapat.kirawittaya@gmail.com> (http://nutstick.dev/)",
   "version": "1.0.0",
-  "bin": "bin/metro-web-dev-server",
+  "bin": "bin/metro-web-dev-server.js",
   "main": "dist/index.js",
   "license": "MIT",
   "files": [
