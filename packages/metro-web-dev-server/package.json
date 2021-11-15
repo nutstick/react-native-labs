@@ -1,5 +1,14 @@
 {
   "name": "metro-web-dev-server",
+  "description": "Simple dev server using metro to build web",
+  "keywords": [
+    "metro",
+    "react-native",
+    "web",
+    "dev",
+    "server"
+  ],
+  "author": "Nuttapat Kirawittaya <nuttapat.kirawittaya@gmail.com> (http://nutstick.dev/)",
   "version": "1.0.0",
   "bin": "bin/metro-web-dev-server",
   "main": "dist/index.js",
