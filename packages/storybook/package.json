@@ -16,7 +16,7 @@
     "storybook-watcher": "sb-rn-watcher --config-path=./.storybook",
     "test": "jest --passWithNoTests",
     "preweb": "yarn get-stories",
-    "web": "metro-web-dev-server --entry index.js --html index.html"
+    "web": "metro-web-dev-server --entry index.js --html index.html -c metro.web.config.js"
   },
   "jest": {
     "moduleFileExtensions": [
