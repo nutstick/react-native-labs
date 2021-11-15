@@ -115,3 +115,18 @@ then in your `metro.web.config.js`
     }
   }
 ```
+
+### Hot reload support
+
+This package also provide you a quick setup of Hot module reload and react fast refresh. You may import `metro-web-dev-server/dist/setupHMR` in your bundle entry
+
+```diff
++ if (__DEV__) {
++   require("metro-web-dev-server/dist/setupHMR");
++ }
+
+AppRegistry.runApplication("App", {
+  rootTag: document.getElementById("root"),
+});
+
+```
