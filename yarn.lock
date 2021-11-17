@@ -9862,13 +9862,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"helmet@npm:^4.6.0":
-  version: 4.6.0
-  resolution: "helmet@npm:4.6.0"
-  checksum: 139ad678d1cab207b043c206f50f6744eff2ef1f463e4626d36718b45b337485c77d10260ef9d89d292fa678da5153d86b08172b3b365cc8e680241015ed3a49
-  languageName: node
-  linkType: hard
-
 "hermes-engine@npm:~0.8.1":
   version: 0.8.1
   resolution: "hermes-engine@npm:0.8.1"
@@ -12742,13 +12735,12 @@ __metadata:
     "@types/node": ^16.11.6
     express: ^4.17.1
     graceful-fs: ^4.2.8
-    helmet: ^4.6.0
     metro: ^0.66.2
     ts-invariant: ^0.9.3
     typescript: ^4.4.4
     yargs: ^17.2.1
   bin:
-    metro-web-dev-server: bin/metro-web-dev-server
+    metro-web-dev-server: bin/metro-web-dev-server.js
   languageName: unknown
   linkType: soft
 
