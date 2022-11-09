@@ -4,7 +4,7 @@ import './storybook.requires';
 
 const StorybookUIRoot = getStorybookUI({
   // initialSelection: { kind: 'Radio control', name: 'Basic' },
-  // shouldPersistSelection: false,
+  shouldPersistSelection: false,
 });
 
 export default StorybookUIRoot;

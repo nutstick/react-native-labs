@@ -6,19 +6,31 @@
  */
 const path = require("path");
 const fs = require("fs");
+const {
+ makeMetroConfig 
+} = require('@rnx-kit/metro-config')
+
+const MetroSymlinksResolver = require('@rnx-kit/metro-resolver-symlinks');
+
+const root = path.resolve(__dirname, '../..');
+
 
 module.exports = {
-  watchFolders: [path.resolve(__dirname, "../../")],
+  projectRoot: __dirname,
+  watchFolders: [root],
+  resolver: {
+    resolveRequest :   MetroSymlinksResolver (),
+  },
   transformer: {
     getTransformOptions: async () => ({
       transform: {
         experimentalImportSupport: false,
-        inlineRequires: true,
+        inlineRequires: false,
       },
     }),
   },
   resolver: {
     platforms: ['ios', 'android', 'native'],
-    resolverMainFields: ["sbmodern", "browser", "main"],
+    resolverMainFields: ["sbmodern", "react-native", "browser", "main"],
   },
 };
